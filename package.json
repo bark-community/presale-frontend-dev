@@ -1,0 +1,19 @@
+{
+  "name": "presale-frontend-dev",
+  "version": "1.0.0",
+  "description": "Welcome to the BARK PreSale Frontend repository! This frontend application is based on the Solana blockchain and serves as the user interface for participating in the BARK token PreSale event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@solana/spl-token": "^0.4.3",
+    "@solana/web3.js": "^1.91.3",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react-swc": "^3.6.0",
+    "eslint": "^8.57.0"
+  }
+}
