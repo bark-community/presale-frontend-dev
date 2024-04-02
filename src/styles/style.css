@@ -1,0 +1,342 @@
+/* style.css */
+
+/* Font Presets */
+:root {
+    --primary-font: 'Inter', sans-serif; /* Default font */
+  }
+  
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+  
+  /* Color Presets */
+  :root {
+    --primary-color: #2c3e50; /* Gunmetal */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #3498db; /* Light Blue */
+    --text-color: #333333; /* Dark Gray */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow Color */
+  }
+  
+  /* General Styles */
+  body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    border-radius: 8px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    text-shadow: 1px 1px 1px var(--shadow-color);
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: var(--accent-color);
+  }
+  
+  .toggle-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px var(--shadow-color);
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px var(--shadow-color);
+    border-radius: 8px;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    text-shadow: 1px 1px 1px var(--shadow-color);
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media screen and (max-width: 768px) {
+    nav ul {
+      display: none;
+    }
+  
+    .toggle-menu {
+      display: block;
+    }
+  
+    .toggle-menu.active + nav ul {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary-color);
+      padding: 10px 0;
+      border-radius: 8px;
+    }
+  
+    nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  
+    .container {
+      padding: 0 10px;
+    }
+  }
+  
+  /* Button Styles */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #2980b9; /* Darker shade of the accent color */
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  .card p {
+    margin-bottom: 0;
+  }
+  
+  /* Input Styles */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+  
+  /* Responsive Image Styles */
+  .responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Table Styles */
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--accent-color);
+  }
+  
+  th {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+  }
+  
+  /* Title Styles */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Frame Styles */
+  .frame {
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Tokenomics Styles */
+  .tokenomics {
+    margin-bottom: 40px;
+  }
+  
+  .tokenomics h2 {
+    font-size: 28px;
+  }
+  
+  .tokenomics table {
+    margin-top: 20px;
+  }
+  
+  /* FAQ Styles */
+  .faq {
+    margin-bottom: 40px;
+  }
+  
+  .faq h2 {
+    font-size: 28px;
+  }
+  
+  .faq .question {
+    font-weight: bold;
+  }
+  
+  .faq .answer {
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Styles */
+  .contact {
+    margin-bottom: 40px;
+  }
+  
+  .contact h2 {
+    font-size: 28px;
+  }
+  
+  .contact .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .contact .form-group input[type="text"],
+  .contact .form-group input[type="email"],
+  .contact .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact .form-group textarea {
+    height: 150px;
+  }
+  
+  .contact .form-group input[type="text"]:focus,
+  .contact .form-group input[type="email"]:focus,
+  .contact .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+  
+  /* Add hover effect to cards */
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add subtle gradient background to buttons for depth */
+  .button {
+    background-image: linear-gradient(to bottom right, #2980b9, #3498db);
+  }
+  
+  /* Add transition effect to input fields */
+  .input-field {
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: var(--accent-color);
+  }
+  
+  /* Add margin-bottom to tables for spacing */
+  table {
+    margin-bottom: 20px;
+  }
+  
+  /* Adjust font size for better readability */
+  th, td {
+    font-size: 16px;
+  }
+  
+  /* Adjust padding for better spacing */
+  th, td {
+    padding: 10px 15px;
+  }
+  
+  /* Add border radius to images for rounded corners */
+  .responsive-img {
+    border-radius: 8px;
+  }
+  
